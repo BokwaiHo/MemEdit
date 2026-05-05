@@ -1,0 +1,46 @@
+# Tiny config for CPU smoke-testing — not for real experiments.
+memory:
+  num_layers: 2
+  hidden_dim: 64
+  intermediate_dim: 128
+  vocab_size: 256
+  activation: gelu
+  dropout: 0.0
+  backbone_layer_frac: 0.75
+  interpolation_lambda: 0.3
+
+attribution:
+  riemann_steps: 8
+  sparsity_tau: 0.05
+  baseline: corpus_mean
+  eps: 1.0e-8
+
+insert:
+  eps_svd: 1.0e-5
+  target_layer: null
+
+modify:
+  locality_gamma: 0.1
+  closed_form: false
+  num_sgd_steps: 10
+  learning_rate: 1.0e-2
+
+delete:
+  num_steps: 5
+  initial_lr: 5.0e-3
+  grad_clip: 1.0
+  max_extra_steps: 5
+  kl_threshold: 2.0
+
+mome:
+  initial_num_shards: 2
+  top_k: 1
+  expansion_threshold: 0.3   # lower-rank space ⇒ trigger expansion sooner
+  gating_hidden: 0
+  gate_noise_std: 0.01
+  max_key_buffer: 5000
+
+device: cpu
+dtype: float32
+seed: 0
+use_llm_interpolation: false

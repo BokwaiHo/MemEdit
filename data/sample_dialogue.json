@@ -1,0 +1,28 @@
+{
+  "sessions": [
+    {
+      "session_id": "s1",
+      "turns": [
+        {"turn_id": 0, "timestamp": "2025-03-01", "speaker": "user",
+         "utterance": "Hi! Nice to meet you."},
+        {"turn_id": 1, "timestamp": "2025-03-01", "speaker": "user",
+         "utterance": "I just started learning piano last month."},
+        {"turn_id": 2, "timestamp": "2025-03-01", "speaker": "user",
+         "utterance": "My favorite composer is Chopin."},
+        {"turn_id": 3, "timestamp": "2025-03-01", "speaker": "user",
+         "utterance": "Can you suggest some beginner pieces?"}
+      ]
+    },
+    {
+      "session_id": "s2",
+      "turns": [
+        {"turn_id": 0, "timestamp": "2025-04-15", "speaker": "user",
+         "utterance": "I actually moved on from Chopin, I'm really into Debussy now."},
+        {"turn_id": 1, "timestamp": "2025-04-15", "speaker": "user",
+         "utterance": "Please forget what I told you about my medical history last year."},
+        {"turn_id": 2, "timestamp": "2025-04-15", "speaker": "user",
+         "utterance": "Thanks, that was helpful."}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+# Default MemEdit configuration.
+# Matches paper Appendix B.1 (Table 6) and Section 4.1 implementation details.
+
+memory:
+  num_layers: 4
+  hidden_dim: 4096
+  intermediate_dim: 11008
+  vocab_size: 32000
+  activation: gelu
+  dropout: 0.0
+  backbone_layer_frac: 0.75
+  interpolation_lambda: 0.3
+
+attribution:
+  riemann_steps: 20         # S in Eq. 2
+  sparsity_tau: 0.03        # τ in Eq. 3
+  baseline: corpus_mean
+  eps: 1.0e-8
+
+insert:
+  eps_svd: 1.0e-5           # Appendix B.3
+  target_layer: null        # null ⇒ last MLP layer
+
+modify:
+  locality_gamma: 0.1       # γ in Eq. 6
+  closed_form: false
+  num_sgd_steps: 20
+  learning_rate: 1.0e-3
+
+delete:
+  num_steps: 5              # T in Appendix B.5
+  initial_lr: 1.0e-2        # η_0 in Appendix B.5
+  grad_clip: 1.0
+  max_extra_steps: 5
+  kl_threshold: 2.0         # τ_del in Appendix B.5
+
+mome:
+  initial_num_shards: 2     # N in Sec. 4.1
+  top_k: 1                  # k in Eq. 8
+  expansion_threshold: 0.15 # δ in Sec. 3.4
+  gating_hidden: 0
+  gate_noise_std: 0.01
+  max_key_buffer: 20000
+
+device: cpu
+dtype: float32
+seed: 42
+use_llm_interpolation: true

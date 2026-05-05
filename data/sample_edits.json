@@ -1,0 +1,25 @@
+{
+  "hidden_dim": 64,
+  "vocab_size": 256,
+  "memories": [
+    {"trace_id": "m0", "target_peak": 17, "content": "user likes jazz"},
+    {"trace_id": "m1", "target_peak": 42, "content": "user lives in Tokyo"},
+    {"trace_id": "m2", "target_peak": 73, "content": "user has a cat named Miso"},
+    {"trace_id": "m3", "target_peak": 101, "content": "user works in finance"},
+    {"trace_id": "m4", "target_peak": 200, "content": "user speaks Japanese and English"}
+  ],
+  "edits": [
+    {"op": "INSERT", "new": "m0"},
+    {"op": "INSERT", "new": "m1"},
+    {"op": "INSERT", "new": "m2"},
+    {"op": "INSERT", "new": "m3"},
+    {"op": "INSERT", "new": "m4"},
+    {"op": "QUERY", "target": "m0"},
+    {"op": "QUERY", "target": "m1"},
+    {"op": "MODIFY", "old": "m1", "new_target_peak": 55},
+    {"op": "MODIFY", "old": "m0", "new_target_peak": 123},
+    {"op": "DELETE", "target": "m2"},
+    {"op": "DELETE", "target": "m3"},
+    {"op": "QUERY", "target": "m4"}
+  ]
+}

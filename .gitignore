@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# virtualenvs
+.venv/
+venv/
+env/
+
+# test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# artifacts
+artifacts/
+*.ckpt
+*.pt
+
+# editor
+.vscode/
+.idea/
+*.swp
+.DS_Store
