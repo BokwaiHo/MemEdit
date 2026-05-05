@@ -94,16 +94,6 @@ beyond what the paper specifies:
 5. **MoME** tracks the rank of `K_0` per shard via truncated SVD and
    spawns a new shard when `rank(P_⊥) < δ · d`.
 
-This is a research implementation. It is not optimized for
+Note that this is a research implementation. It is not optimized for
 production throughput, but every component is self-contained and testable.
 
-## Citation
-
-```bibtex
-@inproceedings{memedit2026,
-  title     = {MemEdit: Fine-Grained Memory Surgery for Expandable Parametric Agent Memory},
-  author    = {Anonymous},
-  booktitle = {NeurIPS},
-  year      = {2026}
-}
-```
