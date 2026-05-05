@@ -26,7 +26,7 @@ including:
 ## Repo Layout
 
 ```
-memedit/
+MemEdit/
 ├── memedit/                    # library source
 │   ├── core/                   #   config, editor facade, key buffer
 │   ├── models/                 #   MLPMemory + InterpolatedMemoryLM
